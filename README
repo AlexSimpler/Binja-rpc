@@ -1,0 +1,9 @@
+Binja-rpc
+=========
+
+This plugin is an integration for Binary Ninja that implements a customizable Discord Rich Presence with multiple details.
+
+Usage
+=====
+	
+	Insert the DLL inside your plugins folder.
