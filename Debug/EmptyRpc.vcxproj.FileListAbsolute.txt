@@ -1,2 +1,0 @@
-C:\Users\admob\source\repos\EmptyRpc\Debug\EmptyRpc.exe
-C:\Users\admob\source\repos\EmptyRpc\Debug\EmptyRpc.pdb
