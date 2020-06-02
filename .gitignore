@@ -3,3 +3,6 @@ x64/
 Debug/
 .vs/EmptyRpc/v16/.suo
 README - Copy
+EmptyRpc.vcxproj
+EmptyRpc.vcxproj.filters
+EmptyRpc.vcxproj.user
