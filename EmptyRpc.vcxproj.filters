@@ -45,9 +45,6 @@
     <ClCompile Include="Discord\src\serialization.cpp">
       <Filter>Source Files\Discord</Filter>
     </ClCompile>
-    <ClCompile Include="binaryninjaapi.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RPC.hpp">
@@ -67,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Discord\src\serialization.h">
       <Filter>Source Files\Discord</Filter>
+    </ClInclude>
+    <ClInclude Include="Binja.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
