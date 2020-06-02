@@ -6,13 +6,6 @@ This plugin is an integration for Binary Ninja that implements a customizable Di
 Usage
 =====
 	
-1. make the binaryninjacore.lib file by using this makefile https://github.com/Vector35/binaryninja-api/blob/dev/Makefile.win ( run on the vs console ''' nmake /F Makefile.win '''
-2. then statically link against binaryninjacore.lib
-3. and import the header files
-
-Warnings
-========
-Don’t add any binary ninja .cpp files to your project
 
 Credits
 =======
