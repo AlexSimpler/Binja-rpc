@@ -83,7 +83,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\admob\source\repos\EmptyRpc\Discord\src;C:\Users\admob\source\repos\EmptyRpc\Discord\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\admob\source\repos\EmptyRpc\Dependencies\src;C:\Users\admob\source\repos\EmptyRpc\Dependencies\include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\</OutDir>
     <TargetName>Binja-rpc${platform}</TargetName>
     <LibraryPath>C:\Users\admob\Documents\coding stuff\Libs\Binary ninja;$(LibraryPath)</LibraryPath>
@@ -144,34 +144,31 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libbinaryninjaapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libbinaryninjaapi.lib;binaryninjacore.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Discord\src\connection_win.cpp" />
-    <ClCompile Include="Discord\src\discord_register_win.cpp" />
-    <ClCompile Include="Discord\src\discord_rpc.cpp" />
-    <ClCompile Include="Discord\src\dllmain.cpp" />
-    <ClCompile Include="Discord\src\rpc_connection.cpp" />
-    <ClCompile Include="Discord\src\serialization.cpp" />
+    <ClCompile Include="Dependencies\src\connection_win.cpp" />
+    <ClCompile Include="Dependencies\src\discord_register_win.cpp" />
+    <ClCompile Include="Dependencies\src\discord_rpc.cpp" />
+    <ClCompile Include="Dependencies\src\dllmain.cpp" />
+    <ClCompile Include="Dependencies\src\rpc_connection.cpp" />
+    <ClCompile Include="Dependencies\src\serialization.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RPC.cpp" />
     <ClCompile Include="stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binja.hpp" />
-    <ClInclude Include="Discord\src\backoff.h" />
-    <ClInclude Include="Discord\src\connection.h" />
-    <ClInclude Include="Discord\src\msg_queue.h" />
-    <ClInclude Include="Discord\src\rpc_connection.h" />
-    <ClInclude Include="Discord\src\serialization.h" />
+    <ClInclude Include="Dependencies\src\backoff.h" />
+    <ClInclude Include="Dependencies\src\connection.h" />
+    <ClInclude Include="Dependencies\src\msg_queue.h" />
+    <ClInclude Include="Dependencies\src\rpc_connection.h" />
+    <ClInclude Include="Dependencies\src\serialization.h" />
     <ClInclude Include="RPC.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Discord\src\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Discord\src\discord_register_osx.m" />
+    <Text Include="Dependencies\src\CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

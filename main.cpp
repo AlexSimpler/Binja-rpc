@@ -1,7 +1,6 @@
 #include "stdafx.hpp"
 #include "RPC.hpp"
 #include "Binja.hpp"
-#pragma comment(lib, "libbinaryninjaapi.lib")
 
 using namespace BinaryNinja;
 
