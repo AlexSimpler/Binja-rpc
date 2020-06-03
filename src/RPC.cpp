@@ -19,7 +19,7 @@ bool RPC::updatePresence() const
 	int64_t eptime = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 	DiscordRichPresence discordPresence;
 	memset(&discordPresence, 0, sizeof(discordPresence));
-	discordPresence.state = "Playing Solo";
+	discordPresence.state = "Reversing a binary";
 	discordPresence.details = "Competitive";
 	discordPresence.startTimestamp = eptime;
 	discordPresence.endTimestamp = NULL;

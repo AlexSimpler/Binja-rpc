@@ -5,8 +5,10 @@ This plugin is an integration for Binary Ninja that implements a customizable Di
 
 Usage
 =====
-	
+
+Open the solution and compile it under x64 or x86, then open ' transfer.bat '.
 
 Credits
 =======
-ALl rights reserved 2020 AlexSimpler
+
+All rights reserved 2020 - AlexSimpler.
