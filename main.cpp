@@ -1,8 +1,6 @@
 #include "stdafx.hpp"
 #include "RPC.hpp"
 #include "Binja.hpp"
-#pragma comment(lib, "libbinaryninjaapi.lib")
-#pragma comment(lib, "binaryninjacore.lib")
 
 using namespace BinaryNinja;
 
@@ -11,15 +9,17 @@ void entry(BinaryView* bv, uint64_t addr) {
 	LogInfo(current_file->GetFilename().c_str());
 }
 
-int main()
+extern "C"
 {
-	PluginCommand::RegisterForAddress("DiscordRichPresence", "A rich presence plugin for Binary Ninja", entry);
+	BINARYNINJAPLUGIN bool CorePluginInit()
+	{
+		Log(InfoLog, "Loaded C++ plugin 'binja-rpc'");
 
-	RPC* rpc = new RPC;
+		RPC* rpc = new RPC;
+		rpc->initialize();
+		rpc->updatePresence();
+		LogInfo("Connected to discord?");
 
-	rpc->initialize();
-	rpc->updatePresence();
-
-	std::cin.get();
-	return 0;
-}
+		return true;
+	}
+};

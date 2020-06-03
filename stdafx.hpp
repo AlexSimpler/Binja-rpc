@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define WIN32
 #include <iostream>
 #include <Windows.h>
 #include <string>

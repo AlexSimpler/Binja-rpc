@@ -6,3 +6,6 @@ README - Copy
 EmptyRpc.vcxproj
 EmptyRpc.vcxproj.filters
 EmptyRpc.vcxproj.user
+bin/*.*
+*.vcxproj
+*.vcxproj.*
