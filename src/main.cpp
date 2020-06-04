@@ -3,23 +3,34 @@
 #include "Binja.hpp"
 
 using namespace BinaryNinja;
+RPC* rpc = new RPC;
 
-void entry(BinaryView* bv, uint64_t addr) {
-	FileMetadata* current_file = bv->GetFile();
-	LogInfo(current_file->GetFilename().c_str());
+static FileMetadata* current_file;
+
+bool callback(BinaryView* bv, uint64_t addr)
+{
+	static bool init = false;
+	current_file = bv->GetFile();
+
+	if (!init) {
+		init = !init;
+		rpc->updatePresence(bv, addr);
+	}
+	if (bv->GetFile())
+	{
+		if (bv->GetFile() != current_file)
+			rpc->updatePresence(bv, addr);
+	}
+	return true;
 }
 
-extern "C"
-{
+extern "C" {
 	BINARYNINJAPLUGIN bool CorePluginInit()
 	{
-		Log(InfoLog, "Loaded C++ plugin 'binja-rpc'");
-
-		RPC* rpc = new RPC;
+		Log(InfoLog, "Loaded c++ plugin 'binja-rpc'");
+		PluginCommand::RegisterForAddress("", "", nullptr, &callback);
 		rpc->initialize();
-		rpc->updatePresence();
-		LogInfo("Connected to discord?");
 
 		return true;
 	}
-};
+}
