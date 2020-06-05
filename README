@@ -10,7 +10,7 @@ To build this plugin to support linux/macOS:
 - compile the binaryninjaapi library from the binaryninja-api repository
 - replace the files inside dependencies/Library with the one's you compiled
 - statically link them as additional dependencies
-- build it and put it inside plugins
+- build the project and put it inside the plugins directory
 
 Building
 ========
