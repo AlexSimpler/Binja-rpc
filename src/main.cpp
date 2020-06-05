@@ -28,7 +28,7 @@ extern "C" {
 	BINARYNINJAPLUGIN bool CorePluginInit()
 	{
 		Log(InfoLog, "Loaded c++ plugin 'binja-rpc'");
-		PluginCommand::RegisterForAddress("", "", nullptr, &callback);
+		PluginCommand::RegisterForAddress("Discord Rich Presence\\Update Presence", "", nullptr, &callback);
 		rpc->initialize();
 
 		return true;
