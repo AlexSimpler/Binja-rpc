@@ -1,11 +1,11 @@
 Binja-rpc
 =========
 This plugin is an integration for Binary Ninja that implements a custom Discord Rich Presence with multiple details.
-Currently MacOS and linux are not supported. They will be coming in the next update but you can build them yourself ( See compatibility ). 
+Currently MacOS and linux are not supported ( see Compatibility ). They will be coming in the next update. 
 
 Compatibility
 =============
-To build this plugin to support these platforms:
+To build this plugin to support linux/macOS:
 - get the binaryninjacore library from binary ninja installation folder
 - compile the binaryninjaapi library from the binaryninja-api repository
 - replace the files inside dependencies/Library with the one's you compiled
