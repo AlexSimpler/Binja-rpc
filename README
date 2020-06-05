@@ -4,7 +4,7 @@ This plugin is an integration for Binary Ninja that implements a customizable Di
 Currently MacOS and linux are not supported. You will have to build them yourself ( See compatibility ). 
 
 Compatibility
-===========
+-------------
 To build this plugin to support these platforms:
 - get the binaryninjacore library from binary ninja installation folder
 - compile the binaryninjaapi library from the binaryninja-api repository
@@ -13,17 +13,17 @@ To build this plugin to support these platforms:
 - build it and put it inside plugins
 
 Usage
-=====
+-----
 Download ' update.bat ' then put the dll inside a bin folder and then open the bat file.
 
 Building
-========
+--------
 Open the solution and compile it under x64 or x86, then open ' update.bat '.
 
 Todo's
-======
+------
 - Make a ' idling ' presence when in the menu.
 
 Credits
-=======
+-------
 All rights reserved 2020 - AlexSimpler.
