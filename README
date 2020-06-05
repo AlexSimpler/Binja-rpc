@@ -14,7 +14,7 @@ To build this plugin to support these platforms:
 
 Usage
 =====
-Download ' update.bat ' then put the dll inside a bin folder and then open transfer.
+Download ' update.bat ' then put the dll inside a bin folder and then open the bat file.
 
 Building
 ========
